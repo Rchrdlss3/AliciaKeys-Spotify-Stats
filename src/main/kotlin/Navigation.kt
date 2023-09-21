@@ -1,16 +1,25 @@
 import react.FC
 import react.Props
-import react.dom.html.ReactHTML.li
-import react.dom.html.ReactHTML.ul
-import react.dom.html.ReactHTML.div
-import csstype.ClassName
+import web.cssom.ClassName
+import mui.material.Box
+import mui.material.styles.TypographyVariant
+import mui.material.Typography
+import react.router.dom.NavLink
 
 val Navigation = FC<Props> {
-    div {
+    Box {
         className = ClassName("navigation-links")
-        ul {
-            for (link in NavigationLinks.values()) {
-                li {
+        for (link in NavigationLinks.entries) {
+            NavLink {
+                to = link.linkTo
+                classNameFn = {
+                    when(it.isActive) {
+                        true -> "active"
+                        false -> ""
+                    }
+                }
+                Typography {
+                    variant = TypographyVariant.button
                     +link.linkName
                 }
             }

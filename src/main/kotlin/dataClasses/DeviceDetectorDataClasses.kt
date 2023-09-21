@@ -1,8 +1,14 @@
 package dataClasses
 
-import npm.DeviceDetector
 import kotlinx.serialization.Serializable
 
+
+@Serializable
+data class Product(
+    val architecture: Int?,
+    val family: String?,
+    val version: String?
+)
 @Serializable
 data class Client (
     val type: String,

@@ -10,9 +10,15 @@ enum class AlbumEnumClass(val album: String, val albumId:String,val albumImagePa
 }
 
 enum class NavigationLinks(val linkName: String, val linkTo: String) {
-    HOME("Home",""),
-    SPOTIFY_STATISTICS("Spotify Statistics",""),
-    CLUB_KEYS("Club Keys",""),
-    JOIN_US("Join Us","")
+    HOME("Home","/"),
+    SPOTIFY_STATISTICS("Spotify Statistics","/Spotify-Stats"),
+    CLUB_KEYS("Club Keys","/Club-Keys"),
+    JOIN_US("Join Us","/Join-Us")
+}
 
+enum class SpotifyTableHeaders(val headerName: String) {
+    NAME("Name"),
+    PLAY_COUNT("Play Count"),
+    TRACK_NUMBER("Track Number"),
+    SONG_URI("Song URI")
 }
