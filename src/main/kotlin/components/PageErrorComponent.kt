@@ -1,6 +1,5 @@
 package components
 
-import Navigation
 import mui.material.Box
 import react.FC
 import react.Props
@@ -10,7 +9,6 @@ import mui.material.styles.TypographyVariant
 import web.cssom.ClassName
 
 val PageErrorComponent = FC<Props> {
-    Navigation{}
     Box {
         className = ClassName("error-page-wrapper")
         Typography {

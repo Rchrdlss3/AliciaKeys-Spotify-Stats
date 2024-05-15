@@ -10,7 +10,7 @@ enum class AlbumEnumClass(val album: String, val albumId:String,val albumImagePa
 }
 
 enum class NavigationLinks(val linkName: String, val linkTo: String) {
-    HOME("Home","/"),
+    HOME("Home","/home"),
     SPOTIFY_STATISTICS("Spotify Statistics","/Spotify-Stats"),
     CLUB_KEYS("Club Keys","/Club-Keys"),
     JOIN_US("Join Us","/Join-Us")

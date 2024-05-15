@@ -17,14 +17,14 @@ suspend fun getAlbumImages():ReturnedAlbumImagesData{
     return Json.decodeFromString(response)
 }
 
-suspend fun getSpotifyAccessToken():SpotifyAccessToken{
-    val response = window
-        .fetch("https://open.spotify.com/get_access_token")
-        .await()
-        .text()
-        .await()
-    return ignoreUnknown.decodeFromString(response)
-}
+//suspend fun getSpotifyAccessToken():SpotifyAccessToken{
+//    val response = window
+//        .fetch("https://open.spotify.com/get_access_token")
+//        .await()
+//        .text()
+//        .await()
+//    return ignoreUnknown.decodeFromString(response)
+//}
 
 suspend fun fetchAlbum(albumId:String): ReturnedData {
     console.log(ReturnedData())

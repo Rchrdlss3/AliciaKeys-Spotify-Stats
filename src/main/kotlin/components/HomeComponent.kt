@@ -1,6 +1,6 @@
 package components
 
-import Navigation
+import helper.ConstantLinks
 import mui.material.Box
 import mui.material.styles.TypographyVariant
 import react.FC
@@ -11,12 +11,13 @@ import react.dom.html.ReactHTML.img
 import web.cssom.ClassName
 import mui.material.Typography
 import mui.system.sx
+import react.dom.html.ReactHTML.a
 import web.cssom.rgb
+import web.window.WindowTarget
 
 val HomeComponent = FC<Props> {
         Box {
             className = ClassName("home-image-wrapper")
-            Navigation{}
             Box {
                 className = ClassName("home-message")
                 h1 {
@@ -37,12 +38,21 @@ val HomeComponent = FC<Props> {
                 }
                 Box {
                     className = ClassName("right-home-links")
-                    img {
-                        src = "https://rchrdlss3.github.io/AliciaKeysAPI/HomeLinks/stationhead.png"
+                    a {
+                        href = ConstantLinks.CLUB_KEYS_LINK.link
+                        target = WindowTarget._blank
+                        img {
+                            src = "https://rchrdlss3.github.io/AliciaKeysAPI/HomeLinks/stationhead.png"
+                        }
                     }
-                    img {
-                        src = "https://rchrdlss3.github.io/AliciaKeysAPI/HomeLinks/x.png"
+                    a {
+                        href = ConstantLinks.X_LINK.link
+                        target = WindowTarget._blank
+                        img {
+                            src = "https://rchrdlss3.github.io/AliciaKeysAPI/HomeLinks/x.png"
+                        }
                     }
+
                 }
             }
             img {

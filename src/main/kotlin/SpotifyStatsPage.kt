@@ -8,13 +8,9 @@ import web.cssom.ClassName
 import mui.material.Box
 import react.useEffectOnce
 
-
-// Alicia Keys Spotify ID 3DiDSECUqqY1AuBP8qtaIa
-
 val mainScope = CoroutineScope(Dispatchers.Main)
 
-val SpotifyStatsApp = FC<Props> {
-    Navigation {}
+val SpotifyStatsPage = FC<Props> {
     Box {
         className = ClassName("webpage-wrapper")
         val (albumImages, setAlbumImages) = useState(ReturnedAlbumImagesData())
